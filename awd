@@ -1,0 +1,12 @@
+local Frame = vgui.Create("DFrame")
+Frame:SetSize(700,500)
+Frame:ShowCloseButton(false)
+Frame:SetTitle("")
+Frame:SetDraggable(false)	
+Frame:Center()
+Frame.Paint = function(self,w,h)
+	draw.RoundedBox(2, 0, 0, w, h, Color(0,0,0,0))
+end	
+local html = vgui.Create("DHTML", Frame)
+html:Dock(FILL)
+html:OpenURL('https://media.discordapp.net/attachments/780468807281016872/811583291898855444/Untitled.png')
